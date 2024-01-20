@@ -776,6 +776,7 @@ img {
 }
 
 .modal-field-checkbox {
+    margin-bottom: 24px;
 }
 
 .check-text {
@@ -783,7 +784,6 @@ img {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
-    display: flex;
     align-items: center;
     position: relative;
 
@@ -806,7 +806,6 @@ img {
 }
 
 .check-text span {
-    display: inline-flex;
     margin-right: 8px;
     align-items: center;
     justify-content: center;
