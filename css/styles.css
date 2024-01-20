@@ -687,7 +687,7 @@ img {
 .modal-form {}
 
 .modal-field{
-    margin-bottom: 24px;
+    margin-bottom: 8px;
 
 }
 
@@ -743,26 +743,8 @@ img {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.tel-icon {
-    stroke: #404040;
-    position: absolute;
-    left: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .modal-input:focus + .tel-icon {
     fill: #4D5AE5;
-}
-
-.email-icon {
-    stroke: #404040;
-    position: absolute;
-    left: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus + .email-icon {
@@ -824,6 +806,7 @@ img {
 }
 
 .check-text span {
+    display: inline-flex;
     margin-right: 8px;
     align-items: center;
     justify-content: center;
