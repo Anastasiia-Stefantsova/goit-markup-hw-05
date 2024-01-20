@@ -450,6 +450,11 @@ img {
 }
 
 .footer-form {
+    display: flex;
+    gap :24px;
+}
+
+.footer-form-input{
     display: inline-flex;
 }
 
@@ -470,25 +475,28 @@ img {
     width: 264px;
     height: 40px;
     font-size: 12px;
-    line-height: normal;
-    line-height: 2;
+    line-height: 2.0;
     letter-spacing: 0.04em;
     font-style: normal;
     background-color: transparent;
     border-radius: 4px;
     border: 1px solid #FFF;
-    padding: 8px 16px;
-    color: #fff;
-    line-height: normal;
-    letter-spacing: 0.02em;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    padding-left: 16px;
+    color: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    
+}
+
+.footer-input::placeholder {
+    color :#ffffff;
 }
 
 .footer-form-btn {
     color: #fff;
     font-style: normal;
-    width: 165px;
+    min-width: 165px;
     height: 40px;
+    font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
     border-radius: 4px;
@@ -497,6 +505,9 @@ img {
     margin-left: 24px;
     padding: 8px 16px 8px 24px;
     display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 
 }
 
@@ -605,6 +616,8 @@ img {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    background-color: rgba(46, 47, 66, 0.4);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
@@ -615,16 +628,18 @@ img {
 }
 
 .modal {
+
     width: 408px;
     min-height: 584px;
     border-radius: 4px;
     background: #FCFCFC;
     position: absolute;
-    top: 29.5%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 72px 24px 24px 24px;
-   
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn{
@@ -634,20 +649,27 @@ img {
     height: 24px;
     margin-left: auto;
     position: absolute;
-    border: 1px solid #c7cfcf;
-    background-color: #d6dada;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #e7e9fc;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 
-.modal-close-btn:focus {
+.modal-close-icon{
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:focus,
+.modal-close-btn:hover:{
     background-color: #404BBF;
     fill: #fff;
+    border: none;
 }
 
 .modal-title{
@@ -657,27 +679,39 @@ img {
     text-align: center;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    margin-bottom: 16px;
+
+
 }
 
 .modal-form {}
 
 .modal-field{
+    margin-bottom: 8px;
 
 }
- 
+
+.modal-field-comment {
+    margin-bottom: 16px;
+}
+
 .modal-label{
     color:#8E8F99;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.16;
+    line-height: 1.17;
     letter-spacing: 0.04em;
+    display: block;
+    margin-bottom: 4px;
+
+
 }
 
 .modal-input-wrap {
     position: relative;
-    margin-top: 4px;
-    margin-bottom: 8px;
+    /* margin-top: 4px; */
+    /* margin-bottom: 8px; */
 }
 
 .modal-input {
@@ -689,7 +723,8 @@ img {
     outline: transparent;
     color: #1e1823;
     padding-left: 38px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .modal-input:focus {
@@ -706,7 +741,7 @@ img {
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tel-icon {
@@ -736,26 +771,31 @@ img {
 }
 
 .input-comment {
-    color: rgba(46, 47, 66, 0.40);
+    color: rgba(46, 47, 66, 0.4);
     font-size: 12px;
     font-style: normal;
-    line-height: 1.16;
-    letter-spacing: 0.03em;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
     resize: none;
     width: 100%;
     height: 120px;
     border-radius: 4px;
-    border: 1px solid rgba(46, 47, 66, 0.40);
+    border: 1px solid rgba(46, 47, 66, 0.4);
     background-color: transparent;
     outline: transparent;
-    padding-top: 8px;
-    padding-left: 16px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 8px 16px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    
     
 }
 
 .input-comment:focus {
-    border-color: #4d5ae5;
+    border-color: #4D5AE5;
+}
+
+.modal-field-checkbox {
+    /* margin-bottom: 24px; */
 }
 
 .check-text {
@@ -797,7 +837,7 @@ img {
 }
 
 .sumbit-btn {
-    display: flex;
+    display: block;
     color: var(--WHITE, #FFF);
     text-align: center;
     justify-content: center;
@@ -806,7 +846,7 @@ img {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    width: 169px;
+    min-width: 169px;
     height: 24px;
     padding: 16px 32px;
     border-radius: 4px;
