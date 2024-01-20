@@ -477,8 +477,7 @@
         </div>
       </div>
     </footer>
-    <!-- is-open -->
-    <div class="backdrop">
+    <div class="backdrop is-open">
       <div class="modal">
         <button type="button" class="modal-close-btn">
           <svg class="modal-close-icon" width="8" height="8">
@@ -515,9 +514,10 @@
             <div class="modal-input-wrap">
               <input
                 type="email"
-                required
                 name="user-email"
                 class="modal-input"
+                id="user-email"
+                required
               />
               <svg class="email-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-email-black-1"></use>
@@ -525,8 +525,8 @@
             </div>
           </div>
           <div class="modal-field-comment">
-            <label class="modal-label" for="user-comment">Comment</label>
             <div class="modal-input-wrap">
+              <label class="modal-label" for="user-comment">Comment</label>
               <textarea
                 id="user-comment"
                 class="input-comment"
@@ -539,22 +539,22 @@
           <div class="modal-field">
             <input
               type="checkbox"
-              name="policy"
-              id="policy"
+              name="user-privacy"
+              id="user-privacy"
               class="check-input visually-hidden"
               value="true"
             />
-            <label for="policy" class="check-text">
-              <span>
-                <svg class="check-icon" width="10" height="10">
+            <label for="user-privacy" class="check-text">
+              <span class="check">
+                <svg class="check-icon" width="10" height="8">
                   <use href="./images/icons.svg#icon-Vector-1"></use>
                 </svg>
               </span>
               I accept the terms and conditions of the
               <a href="" class="space">Privacy Policy</a></label
             >
-            <button class="sumbit-btn" type="submit">Send</button>
           </div>
+          <button class="sumbit-btn" type="submit">Send</button>
         </form>
       </div>
     </div>
